@@ -352,11 +352,11 @@ For detailed compliance requirements, see the [License Usage Guide](LICENSE-USAG
 
 **⭐ Star this repository if it helped you! ⭐**
 
-[![GitHub stars](https://img.shields.io/github/stars/Ahmad-Rasheed-01/REPOSITORY.svg?style=social&label=Star)](https://github.com/USERNAME/REPOSITORY)
+[![GitHub stars](https://img.shields.io/github/stars/Ahmad-Rasheed-01/REPOSITORY.svg?style=social&label=Star)](https://github.com/Ahmad-Rasheed-01/AD-Audit-Utility.git)
 [![GitHub forks](https://img.shields.io/github/forks/Ahmad-Rasheed-01/REPOSITORY.svg?style=social&label=Fork)](https://github.com/USERNAME/REPOSITORY/fork)
 [![GitHub watchers](https://img.shields.io/github/watchers/Ahmad-Rasheed-01/REPOSITORY.svg?style=social&label=Watch)](https://github.com/USERNAME/REPOSITORY)
 
-**Made with ❤️ by [Your Name](https://github.com/Ahmad-Rasheed-01)**
+**Made with ❤️ by [Ahmad Rasheed](https://github.com/Ahmad-Rasheed-01)**
 
 </div>
 
