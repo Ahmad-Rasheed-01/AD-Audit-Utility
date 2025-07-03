@@ -1,18 +1,16 @@
 # Active Directory Security Assessment Utility
 
 🛡️ **A comprehensive PowerShell script for auditing Active Directory environments and identifying potential security vulnerabilities.**
-<div align="center">
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue.svg)](https://docs.microsoft.com/en-us/powershell/)
 [![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows/)
 
 [🔍 Features](#-features) •
 [🚀 Quick Start](#-quick-start) •
-[📁 Output Structure](#-output-structure) •
-[🔧 Troubleshooting](#-troubleshooting) •
+[📊 Output Reports](#-output-reports) •
+[🛠️ Troubleshooting](#️-troubleshooting) •
 [📄 License](#-license)
 
-</div>
 
 ## 🔍 Features
 
@@ -61,8 +59,8 @@
 
 1. **Clone the repository**
    ```powershell
-   git clone https://github.com/Ahmad-Rasheed-01/AD-Assesment-Utility.git
-   cd AD-Assesment-Utility
+   git clone https://github.com/Ahmad-Rasheed-01/AD-Assessment-Utility.git
+   cd AD-Assessment-Utility
    ```
 
 2. **Verify PowerShell execution policy**
@@ -315,12 +313,38 @@ The authors assume no liability for misuse of this tool.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+### License Resources
+
+- 📋 **[License Templates](LICENSE-TEMPLATE.md)** - Comprehensive collection of license templates for different use cases
+- 📖 **[License Usage Guide](LICENSE-USAGE-GUIDE.md)** - Step-by-step implementation guide for licenses
+- 📊 **[License Comparison](LICENSE-COMPARISON.md)** - Detailed comparison matrix to help choose the right license
+
+### Quick License Selection
+
+| Use Case | Recommended License | Why |
+|----------|-------------------|-----|
+| 🌐 **Web Libraries** | MIT | Maximum adoption and compatibility |
+| 🏢 **Enterprise Software** | Apache 2.0 | Patent protection and professional terms |
+| 🔒 **Open Source Projects** | GPL v3 | Ensures derivatives remain open source |
+| 📚 **Documentation** | CC BY 4.0 | Designed for creative content |
+| 💼 **Commercial Products** | Custom Commercial | Full control over terms |
+
+### License Compliance
+
+When using this project:
+
+1. ✅ **Include License**: Always include the LICENSE file in distributions
+2. ✅ **Attribution**: Maintain copyright notices in source code
+3. ✅ **Dependencies**: Ensure all dependencies are license-compatible
+4. ✅ **Modifications**: Document any changes made to the original code
+
+For detailed compliance requirements, see the [License Usage Guide](LICENSE-USAGE-GUIDE.md).
+
 ## 🙏 Acknowledgments
 
-- Microsoft Active Directory team for comprehensive PowerShell modules
-- Security community for best practices and methodologies
-- Contributors and testers who help improve the utility
-- Organizations that support open-source security tools
+- Thanks to [Contributor Name](https://github.com/contributor) for amazing feature
+- Inspired by [Project Name](https://github.com/project)
+- Built with ❤️ by the community
 
 ---
 
@@ -328,9 +352,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **⭐ Star this repository if it helped you! ⭐**
 
-[![GitHub stars](https://img.shields.io/github/stars/Ahmad-Rasheed-01/AD-Assesment-Utility.svg?style=social&label=Star)](https://github.com/Ahmad-Rasheed-01/AD-Assesment-Utility)
-[![GitHub forks](https://img.shields.io/github/forks/Ahmad-Rasheed-01/AD-Assesment-Utility.svg?style=social&label=Fork)](https://github.com/Ahmad-Rasheed-01/AD-Assesment-Utility/fork)
-[![GitHub watchers](https://img.shields.io/github/watchers/Ahmad-Rasheed-01/AD-Assesment-Utility.svg?style=social&label=Watch)](https://github.com/Ahmad-Rasheed-01/AD-Assesment-Utility)
+[![GitHub stars](https://img.shields.io/github/stars/Ahmad-Rasheed-01/REPOSITORY.svg?style=social&label=Star)](https://github.com/Ahmad-Rasheed-01/AD-Audit-Utility.git)
+[![GitHub forks](https://img.shields.io/github/forks/Ahmad-Rasheed-01/REPOSITORY.svg?style=social&label=Fork)](https://github.com/USERNAME/REPOSITORY/fork)
+[![GitHub watchers](https://img.shields.io/github/watchers/Ahmad-Rasheed-01/REPOSITORY.svg?style=social&label=Watch)](https://github.com/USERNAME/REPOSITORY)
 
 **Made with ❤️ by [Ahmad Rasheed](https://github.com/Ahmad-Rasheed-01)**
 
