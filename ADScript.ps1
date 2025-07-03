@@ -32,14 +32,14 @@ foreach ($dir in $dirs) {
 }
 
 # Logging function
-function Log-Message {
+function Write-LogMessage {
     param ([string]$message)
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
     "$timestamp - $message" | Out-File -FilePath $LogFile -Append
 }
 
 # Command execution with error handling
-function Execute-Command {
+function Invoke-Command {
     param (
         [scriptblock]$command,
         [string]$outputFile
