@@ -1,7 +1,7 @@
 # Active Directory Security Assessment Utility
 
 🛡️ **A comprehensive PowerShell script for auditing Active Directory environments and identifying potential security vulnerabilities.**
-
+<div align="center">
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![PowerShell](https://img.shields.io/badge/PowerShell-5.1+-blue.svg)](https://docs.microsoft.com/en-us/powershell/)
 [![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)](https://www.microsoft.com/windows/)
@@ -11,6 +11,8 @@
 [📊 Output Reports](#-output-reports) •
 [🛠️ Troubleshooting](#️-troubleshooting) •
 [📄 License](#-license)
+
+</div>
 
 ## 🔍 Features
 
