@@ -147,18 +147,11 @@ AD_Assessment_YYYYMMDD_HHMMSS/
 
 ## 🛡️ Security Considerations
 
-### ⚠️ **Important Security Notes**
-- **Run with appropriate privileges**: Ensure you have necessary domain permissions
-- **Sensitive data handling**: Reports may contain sensitive AD information
-- **Secure storage**: Store output files in secure locations with proper access controls
-- **Network security**: Run from trusted, domain-joined machines only
-- **Audit trail**: Maintain logs of when and by whom assessments are performed
-
-### 🔒 **Best Practices**
-- Review and sanitize reports before sharing
-- Use dedicated service accounts with minimal required permissions
-- Regularly update and patch the assessment environment
-- Implement proper data retention policies for assessment results
+⚠️ **Important**: This tool handles sensitive Active Directory information. Please review our [Security Policy](SECURITY.md) for:
+- Vulnerability reporting procedures
+- Security best practices
+- Safe usage guidelines
+- Data protection requirements
 
 ## 🔧 Troubleshooting
 
@@ -230,22 +223,7 @@ Test-Path "AD_Assessment_*"
 - 🔄 **Parallel Processing**: Leverage PowerShell jobs for large datasets
 - 💾 **Output Management**: Implement retention policies for historical reports
 
-## 🔒 Security & Compliance
 
-### Data Protection
-
-- 🛡️ **Sensitive Information**: Reports contain privileged account details
-- 🔐 **Storage Security**: Encrypt assessment results at rest
-- 🚫 **Access Control**: Restrict report access to authorized personnel
-- 🔍 **Audit Trail**: Log all assessment executions
-- 📋 **Data Retention**: Implement appropriate retention policies
-
-### Compliance Frameworks
-
-- **SOX**: Supports privileged access reviews
-- **PCI DSS**: Assists with access control requirements
-- **NIST**: Aligns with cybersecurity framework controls
-- **ISO 27001**: Supports access management auditing
 
 ## 🤝 Contributing
 
@@ -285,11 +263,7 @@ We welcome contributions to improve the AD Assessment Utility! Here's how you ca
 - Test all changes in isolated lab environments
 - Ensure compatibility with different AD environments
 
-### Security Considerations
-- Never commit sensitive information (credentials, domain names)
-- Follow principle of least privilege in code design
-- Validate all user inputs and parameters
-- Implement proper error handling to prevent information disclosure
+
 
 ## 📞 Support
 
@@ -314,11 +288,7 @@ The authors assume no liability for misuse of this tool.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### License Resources
 
-- 📋 **[License Templates](LICENSE-TEMPLATE.md)** - Comprehensive collection of license templates for different use cases
-- 📖 **[License Usage Guide](LICENSE-USAGE-GUIDE.md)** - Step-by-step implementation guide for licenses
-- 📊 **[License Comparison](LICENSE-COMPARISON.md)** - Detailed comparison matrix to help choose the right license
 
 ### Quick License Selection
 
