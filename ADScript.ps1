@@ -8,14 +8,15 @@
 #    To run this script, open a PowerShell console as an Administrator and execute:
 #    .\ADScript.ps1
 #
-#    The script will create an 'ADResults_yyyyMMdd_HHmmss' folder in the same directory as the script,
+#    The script will prompt you to specify a custom output path or use the default (script directory).
+#    It will create an 'ADResults_yyyyMMdd_HHmmss' folder in the chosen location,
 #    containing various audit reports categorized into subfolders.
 #
 #AUTHOR
 #    Ahmad Rasheed
 #
 #VERSION
-#    1.0.2
+#    1.0.3
 #
 #PREREQUISITES
 #    - Must be run as Administrator
@@ -70,7 +71,7 @@ Write-ColorOutput "                                                             
 Write-ColorOutput "                                                                                                            " "Cyan"
 Write-ColorOutput "                                                                                                            " "Cyan"
 Write-ColorOutput "     Platform: Windows Active Directory                                                                      " "White"
-Write-ColorOutput "     Version: 1.0.2                                                                                 " "White"
+Write-ColorOutput "     Version: 1.0.3                                                                              " "White"
 Write-ColorOutput "     For Updates Please Visit: https://github.com/Ahmad-Rasheed-01/AD-Audit-Utility          " "White"
 Write-ColorOutput "                                                                                                            " "Cyan"
 Write-ColorOutput "═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════" "Cyan"
@@ -125,10 +126,43 @@ Write-ColorOutput "Obtaining system hostname, domain, and current date-time..." 
 $hostname = $env:COMPUTERNAME
 $domain = (Get-WmiObject Win32_ComputerSystem).Domain
 $timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
+
+# Prompt user for output path
+Write-Host
+Write-ColorOutput "Output Path Configuration" "Yellow"
+Write-ColorOutput "═══════════════════════════" "Yellow"
+Write-ColorOutput "Default output location: $PSScriptRoot" "Cyan"
+Write-Host
+# Validate and set output path with retry loop
+do {
+    $customPath = Read-Host "Enter custom output path (or press Enter to use default [current directory])"
+    Write-Host
+    
+    if ([string]::IsNullOrWhiteSpace($customPath)) {
+        $outputBasePath = $PSScriptRoot
+        Write-ColorOutput "Using default path: $outputBasePath" "Green"
+        Write-Host
+        $validPath = $true
+    } else {
+        # Validate custom path
+        if (Test-Path $customPath -PathType Container) {
+            $outputBasePath = $customPath
+            Write-ColorOutput "Using custom path: $outputBasePath" "Green"
+            Write-Host
+            $validPath = $true
+        } else {
+            Write-ColorOutput "✗ The specified path does not exist or is invalid: $customPath" "Red"
+            Write-ColorOutput "Please enter a valid directory path or press Enter for default [current directory]." "Yellow"
+            Write-Host
+            $validPath = $false
+        }
+    }
+} while (-not $validPath)
+
 # Create the folder name and directory
 $folder_name = "ADResults_${hostname}_${domain}_${timestamp}"
 Write-ColorOutput "Creating folder: $folder_name" "Cyan"
-$BasePath = Join-Path $PSScriptRoot $folder_name
+$BasePath = Join-Path $outputBasePath $folder_name
 $ReportPath = Join-Path $BasePath "AuditResults"
 $GPOReportPath = Join-Path $BasePath "GPOReports"
 $ForestDomainDir = Join-Path $BasePath "ForestDomain"
@@ -150,7 +184,8 @@ Write-ColorOutput "DONE." "Green"
 # Initialize log file and start time
 $startTime = Get-Date
 $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
-"$timestamp - [INFO] AD Audit Script started - Version 1.0.2" | Out-File -FilePath $LogFile -Encoding UTF8
+"$timestamp - [INFO] AD Audit Script started - Version 1.0.3" | Out-File -FilePath $LogFile -Encoding UTF8
+"$timestamp - [INFO] Output base path: $outputBasePath" | Out-File -FilePath $LogFile -Append -Encoding UTF8
 "$timestamp - [INFO] Output folder: $folder_name" | Out-File -FilePath $LogFile -Append -Encoding UTF8
 "$timestamp - [INFO] RSAT Available: $ADModuleAvailable" | Out-File -FilePath $LogFile -Append -Encoding UTF8
 Write-Host
@@ -351,7 +386,7 @@ Write-Host
 # Create archive of the audit results
 Write-ColorOutput "Creating archive of audit results..." "Cyan"
 Log-Message "Creating ZIP archive of audit results" "INFO"
-$archivePath = "$PSScriptRoot\$folder_name.zip"
+$archivePath = "$outputBasePath\$folder_name.zip"
 $archiveCreated = $false
 
 # Check if Compress-Archive is available (PowerShell 5.0+)
