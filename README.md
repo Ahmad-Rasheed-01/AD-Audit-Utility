@@ -1,7 +1,7 @@
 # Active Directory Security Assessment Utility
 
 <div align="center">
-  <img src="assets/Logo.png" alt="AD Audit Utility Logo" width="400">
+  <img src="assets/Logo.png" alt="AD Audit Utility Logo" width="800">
 </div>
 
 🛡️ **A comprehensive PowerShell script for auditing Active Directory environments and identifying potential security vulnerabilities.**
