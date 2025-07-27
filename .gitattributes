@@ -1,0 +1,19 @@
+# Set default behavior to automatically normalize line endings
+* text=auto
+
+# Force PowerShell scripts to have CRLF line endings on checkout
+*.ps1 text eol=crlf
+
+# Force shell scripts to have LF line endings on checkout
+*.sh text eol=lf
+
+# Exclude these files from GitHub release archives
+.gitignore export-ignore
+.gitattributes export-ignore
+README-obselete.md export-ignore
+BUG_REPORT.md export-ignore
+SECURITY.md export-ignore
+Issue\ Templates/ export-ignore
+.github/ export-ignore
+*.md export-ignore
+!README.md
