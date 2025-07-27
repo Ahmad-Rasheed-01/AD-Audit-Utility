@@ -131,7 +131,7 @@ $timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
 Write-Host
 Write-ColorOutput "Output Path Configuration" "Yellow"
 Write-ColorOutput "═══════════════════════════" "Yellow"
-Write-ColorOutput "Default output location: $PSScriptRoot" "Cyan"
+Write-ColorOutput "Current output location: $PSScriptRoot" "Cyan"
 Write-Host
 # Validate and set output path with retry loop
 do {
@@ -172,7 +172,7 @@ $AccountAuditDir = Join-Path $BasePath "AccountAudit"
 $AdvSecurityDir = Join-Path $BasePath "AdvancedSecurity"
 $GPODir = Join-Path $BasePath "GPO"
 $SystemInfoDir = Join-Path $BasePath "SystemInfo"
-$LogFile = Join-Path $BasePath "ScriptLog.log"
+$LogFile = Join-Path $BasePath "Script.log"
 
 # Create directories
 $dirs = @($BasePath, $ReportPath, $GPOReportPath, $ForestDomainDir, $SecurityPoliciesDir, $PrivGroupsDir, $AccountAuditDir, $AdvSecurityDir, $GPODir, $SystemInfoDir)
@@ -434,7 +434,7 @@ if ($ADModuleAvailable) {
 }
 Write-ColorOutput "                                                                                                            " "Cyan"
 Write-ColorOutput "     📋 Summary report: AuditSummary.txt                                                                   " "Green"
-Write-ColorOutput "     📝 Detailed log: ScriptLog.log                                                                       " "Green"
+Write-ColorOutput "     📝 Detailed log: Script.log                                                                           " "Green"
 if ($archiveCreated) {
     Write-ColorOutput "     📦 Archive file: $folder_name.zip                                                                     " "Green"
 }
